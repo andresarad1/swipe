@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* VARIABLES */
+:root {
+  /* TEXT VARIABLES */
+  --text-dark: #000;
+  --text-light: #fff;
+  --text-grey: #adbdcc;
+  --body-font: "Roboto", sans-serif;
+  --heading-font: "Anek Telugu", sans-serif;
+
+  /* COLOR VARIABLES */
+  --purple-1: #6962f7;
+  --purple-2: #7000ff;
+  --blue-1: #00d4ff;
+  --primary-accent: #0a2540;
+  --primary-button-hover: #6d7a88;
+  --bg-white: #fff;
+  --bg-light: #f7f9fc;
+}
+body {
+  font-family: var(--body-font);
+  color: var(--text-dark);
+  margin: 0;
+  box-sizing: border-box;
+  padding: 8px 0px 0px 0px;
+  background-color: var(--bg-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+html,
+body {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+main {
+  width: 100%;
+  margin: 64px 0 0 0;
+}
+
+p {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  margin: 16px 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--purple-1);
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 94px;
+  margin: 0;
+  width: 100%;
+  letter-spacing: -1px;
+  line-height: 108px;
+}
+
+.background-diagonal {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 470px;
+  z-index: -1;
+  transform: skewY(-10deg);
+  transform-origin: top left;
+  background: linear-gradient(45deg, #ff7f50, #ff69b4);
+  position: absolute;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1144px;
+  padding: 0px 16px;
+  margin: 0 0 32px 0;
+  box-sizing: border-box;
+}
+
+.primary-button {
+  font-family: var(--body-font);
+  font-size: 16px;
+  letter-spacing: 1.25px;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--primary-accent);
+  color: var(--text-light);
+  padding: 8px 16px;
+  transition: all 0.15s ease;
+}
+
+.primary-button:hover {
+  cursor: pointer;
+  background-color: #0a254096;
+}
+
+.secondary-button {
+  font-family: var(--body-font);
+  font-size: 16px;
+  letter-spacing: 1.25px;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  background-color: transparent;
+  color: var(--purple-2);
+  transition: all 0.15s ease;
+  margin: 0 0 0 16px;
+}
+.secondary-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.with-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.with-icon > img {
+  transition: transform 0.25s ease;
+}
+.with-icon:hover > img {
+  transform: translateX(4px);
+}
+
+.container-section1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container-section1 p {
+  max-width: 480px;
+}
+
+.section1-container {
+  width: 100%;
+  max-width: 1144px;
+}
+
+.two-column {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.two-column > .col-left {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.two-column > .col-right {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.container-section1 p {
+  max-width: 480px;
+}
+
+.container-section1 .section1-phone-container {
+  height: 564px;
+  align-items: flex-end;
+}
+
+.button-container {
+  display: flex;
+  margin: 16px 0;
+}
+
+.section1-phone {
+  height: 628px;
+  transform: translate(32px, -32px);
+}
+
+.partner-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.partner-section {
+  width: 100%;
+  max-width: 1144px;
+}
+.imagepar-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 64px 0;
+  column-gap: 16px;
+  row-gap: 32px;
+}
+.imagepar-container img{
+  place-self: center;
+  height: 60px;
+}
+
+@media screen and (min-width: 1024px) {
+  .hamburger-button {
+    display: none;
+  }
+
+  .option {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .option a {
+    color: var(--text-light);
+    margin: 0 16px;
+    font-weight: bold;
+  }
+  .navbar-button {
+    border-radius: 15px;
+    border: none;
+    font-size: 18px;
+    background: rgba(250, 250, 250, 0.25);
+    padding: 8px 16px;
+    margin: 20px;
+    color: white;
+    font-weight: bold;
+  }
+
+  .navbar-button:hover {
+    cursor: pointer;
+    background-color: rgba(250, 250, 250, 0.648);
+  }
+}
+@media only screen and (max-width: 1144px) {
+  h1 {
+    font-size: 80px;
+    line-height: 85px;
+  }
+
+  .section1-container {
+    padding: 0 16px;
+  }
+
+  .section1-container .col-left {
+    width: 60%;
+  }
+  .container-section1 .col-right {
+    width: 40%;
+  }
+  .partner-container {
+    margin: -60px 0 0 0;
+  }
+  .partner-section {
+    padding: 0 16px;
+  }
+  .imagepar-container {
+    margin: 0 0 64px 0;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  h1 {
+    font-size: 58px;
+    line-height: 65px;
+  }
+
+  main {
+    margin: 32px 0 0 0;
+  }
+
+  .background-diagonal {
+    height: 255px;
+  }
+  .navbar {
+    margin: 0 0 32px 0;
+  }
+  .hamburger-button .bar {
+    width: 18px;
+    height: 2px;
+    background-color: white;
+    margin: 1px 0;
+  }
+  .hamburger-button {
+    width: 50px;
+    height: 30px;
+    background-color: rgba(250, 250, 250, 0.25);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .option {
+    display: none;
+  }
+  .navbar-button {
+    display: none;
+  }
+
+  .main-phone {
+    display: none;
+  }
+
+  .two-column .col-left {
+    width: 100%;
+  }
+  .two-column .col-right {
+    width: 100%;
+    padding: 0;
+  }
+  .two-column {
+    flex-direction: column;
+  }
+  .container-section1 .two-column .section1-phone-container {
+    display: none;
+  }
+  .partner-container {
+    margin: 64px 0 8px 0;
+  }
+  .imagepar-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .imagepar-container img {
+    width: 100%;
+    height: auto;
+  }
+}
