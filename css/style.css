@@ -62,7 +62,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
-.two-column a:hover{
+.two-column a:hover {
   color: var(--primary-accent);
   text-decoration: none;
 }
@@ -81,9 +81,15 @@ h2 {
   font-weight: 600;
   font-size: 34px;
   margin: 0;
-  width: 100%; 
+  width: 100%;
 }
-
+h3 {
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 34px;
+  margin: 0;
+  width: 100%;
+}
 .background-diagonal {
   top: 0;
   left: 0;
@@ -165,7 +171,9 @@ h2 {
   max-width: 480px;
 }
 
-.section1-container, .section2-container {
+.section1-container,
+.section2-container,
+.section3-container {
   width: 100%;
   max-width: 1144px;
 }
@@ -236,18 +244,19 @@ h2 {
   column-gap: 16px;
   row-gap: 32px;
 }
-.imagepar-container img{
+.imagepar-container img {
   place-self: center;
   height: 60px;
 }
-.container-section2{
+.container-section2 {
   padding: 64px 0;
   width: 100%;
   display: flex;
   justify-content: center;
   background-color: var(--bg-light);
 }
-.subtitle, .subtitle2{
+.subtitle,
+.subtitle2 {
   color: var(--purple-1);
   font-family: var(--heading-font);
   font-weight: 500;
@@ -258,11 +267,11 @@ h2 {
   width: 50%;
   margin-bottom: 16px;
 }
-.container-section2 .primary-button{
+.container-section2 .primary-button {
   background-color: var(--purple-1);
   margin: 16px 0;
 }
-.graphic-section2{
+.graphic-section2 {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -271,9 +280,9 @@ h2 {
 .graphic-grid {
   display: grid;
   grid-template-areas:
-      "card slack slack"
-      "phone slack slack"
-      "phone dash dash";
+    "card slack slack"
+    "phone slack slack"
+    "phone dash dash";
   grid-gap: 32px;
   padding: 32px 0;
 }
@@ -299,6 +308,91 @@ h2 {
   box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
 }
+.container-section3 {
+  color: var(--text-light);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: calc(64px * 3) 0;
+  z-index: 1;
+}
+.container-section3::before {
+  content: "";
+  width: 100%;
+  height: 1100px;
+  background-color: var(--primary-accent);
+  position: absolute;
+  top: -32px;
+  left: 0;
+  z-index: -1;
+  transform: skewY(-10deg);
+}
+.container-section3::after {
+  content: "";
+  background-color: var(--bg-light);
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+.subtitle2 {
+  color: var(--blue-1);
+}
+.container-section3 .primary-button {
+  background-color: var(--blue-1);
+  color: var(--primary-accent);
+  margin: 16px 0 0 0;
+}
+.container-section3 .secondary-button{
+  color: var(--blue-1);
+}
+.container-section3 .card-container {
+  display: flex;
+  margin: 32px 0;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 8px 16px 8px 0;
+}
+.container-section3 .card-container .card {
+  width: 50%;
+}
+.card .icon {
+  height: 50px;
+  margin: 0 0 8px 0;
+}
+.card h3 {
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 22px;
+  margin: 0;
+  width: 100%;
+}
+.secondary-text {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--text-grey);
+  letter-spacing: 0.25px;
+}
+#api-code{
+  max-width: 470px;
+  margin: 0 0 16px 0;
+  border-radius: 20px;
+}
+#terminal-code{
+max-width: 470px;
+border-radius: 20px;
+}
+.section3-container .primary-button:hover {
+  background-color: var(--bg-white);
+}
+
 @media screen and (min-width: 1024px) {
   .hamburger-button {
     display: none;
@@ -338,7 +432,8 @@ h2 {
     line-height: 85px;
   }
 
-  .section1-container, .section2-container {
+  .section1-container,
+  .section2-container {
     padding: 0 16px;
   }
 
@@ -357,12 +452,18 @@ h2 {
   .imagepar-container {
     margin: 0 0 64px 0;
   }
+  .section3-container {
+    padding: 0 16px;
+  }
 }
 
 @media screen and (max-width: 1023px) {
   h1 {
     font-size: 58px;
     line-height: 65px;
+  }
+  .card h3 {
+    font-size: 16px;
   }
 
   main {
@@ -425,10 +526,25 @@ h2 {
     width: 100%;
     height: auto;
   }
-  .container-section2{
+  .container-section2 {
     padding: 16px 0;
   }
-  .section2-container h2{
+  .section2-container h2 {
     width: 100%;
+  }
+  .container-section3 {
+    padding: 32px 0;
+  }
+  .container-section3::before {
+    height: 900px;
+  }
+  .container-section3 .card-container {
+    flex-direction: column;
+  }
+  .container-section3 .card-container .card {
+    width: 100%;
+  }
+  .container-section3 .col-right{
+    display: none;
   }
 }
