@@ -79,7 +79,7 @@ h1 {
 h2 {
   font-family: var(--heading-font);
   font-weight: 600;
-  font-size: 34px;
+  font-size: 40px;
   margin: 0;
   width: 100%;
 }
@@ -173,7 +173,8 @@ h3 {
 
 .section1-container,
 .section2-container,
-.section3-container {
+.section3-container,
+.section4-container {
   width: 100%;
   max-width: 1144px;
 }
@@ -392,6 +393,25 @@ border-radius: 20px;
 .section3-container .primary-button:hover {
   background-color: var(--bg-white);
 }
+.container-section4{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: calc(64px*3) 0;
+}
+.container-section4 .card-container{
+  display: flex;
+  margin: 32px 0;
+}
+.container-section4 .card-container .card {
+width: 25%;
+padding: 0 8px 0 0;
+margin: 0 16px 0 0;
+box-sizing: border-box;
+}
+.container-section4 .secondary-text{
+  color: var(--text-dark)
+}
 
 @media screen and (min-width: 1024px) {
   .hamburger-button {
@@ -433,7 +453,9 @@ border-radius: 20px;
   }
 
   .section1-container,
-  .section2-container {
+  .section2-container,
+  .section3-container,
+  .section4-container {
     padding: 0 16px;
   }
 
@@ -461,6 +483,9 @@ border-radius: 20px;
   h1 {
     font-size: 58px;
     line-height: 65px;
+  }
+  h2{
+    font-size: 34px;
   }
   .card h3 {
     font-size: 16px;
@@ -547,4 +572,17 @@ border-radius: 20px;
   .container-section3 .col-right{
     display: none;
   }
+  .container-section4 {
+    padding: 64px 0 16px 0;
+  }
+  .container-section4 .card-container{
+   flex-wrap: wrap;
+  }
+  .container-section4 .card-container .card{
+    width: 100%;
+    margin: 8px 0;
+   }
+   .container-section4 .card-container .card .icon{
+    height: 35px;
+   }
 }
