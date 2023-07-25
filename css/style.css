@@ -38,7 +38,7 @@ html,
 body {
   width: 100%;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 main {
   width: 100%;
@@ -174,7 +174,8 @@ h3 {
 .section1-container,
 .section2-container,
 .section3-container,
-.section4-container {
+.section4-container,
+.section5-container {
   width: 100%;
   max-width: 1144px;
 }
@@ -412,6 +413,57 @@ box-sizing: border-box;
 .container-section4 .secondary-text{
   color: var(--text-dark)
 }
+.container-section5::before {
+  content: "";
+  width: 100%;
+  height: 1200px;
+  background-color: var(--primary-accent);
+  top: -32px;
+  left: 0;
+  transform: skewY(-10deg);
+  z-index: -1;
+  position: absolute;
+  overflow: hiddeng;
+}
+
+.container-section5{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: var(--text-light);
+  position: relative;
+  padding: calc(64px * 3)0 0 0; 
+}
+
+#map{
+  max-width: 844px;
+  opacity: 25%;
+  position: absolute;
+  top: 10%;
+}
+.container-section5 .card-container{
+  display: flex;
+  margin: calc(64px*2) 0;
+}
+.container-section5 .card-container .card{
+  width: 25%;
+  box-sizing: border-box;
+  padding: 0 8px 0 0;
+  margin: 0 16px 0 0;
+}
+.container-section5 .card-container .card h3{
+  border-left: 2px solid var(--blue-1);
+  padding: 0 0 0 8px;
+  line-height: 28px;
+}
+.container-section6 {
+  padding: 64px 0;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-light);
+}
 
 @media screen and (min-width: 1024px) {
   .hamburger-button {
@@ -455,7 +507,8 @@ box-sizing: border-box;
   .section1-container,
   .section2-container,
   .section3-container,
-  .section4-container {
+  .section4-container,
+  .section5-container {
     padding: 0 16px;
   }
 
@@ -585,4 +638,19 @@ box-sizing: border-box;
    .container-section4 .card-container .card .icon{
     height: 35px;
    }
+   .container-section5 {
+    padding: 32px 0;
+   }
+   #map{
+    opacity: 10%;
+   }
+   .container-section5 .card-container{
+    flex-wrap: wrap;
+    margin: 16px 0;
+   }
+   .container-section5 .card-container .card{
+    width: 100%;
+    margin: 8px 0;
+   }
+
 }
